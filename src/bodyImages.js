@@ -11,13 +11,4 @@ const bodyImages = { back, chest, lowerArms, lowerLegs, shoulders, upperArms, up
 
 const bodyNames = Object.keys(bodyImages)
 
-// const bodyNames = originalBodyNames.map((body) => {
-//     if (/[A-Z]/.test(body)) {
-//       return body.slice(0, 5) + ' ' + body[5].toLowerCase() + body.slice(6)
-//     } else {
-//       return body
-//     }
-//   })
-
-
 export { bodyNames, bodyImages }

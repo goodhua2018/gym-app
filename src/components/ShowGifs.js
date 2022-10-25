@@ -29,7 +29,7 @@ function ShowGifs () {
   
   const getExerciseData = () => {
     let randomNum = Math.floor(Math.random() * 1324)
-    fetch('/exerciseGifData')
+    fetch('api/exerciseGifData')
       .then(res => res.json())
       .then(res => res.exerciseGifData.slice(randomNum, randomNum + 3))
       .then(res => setGifs(res.map(item => item.gifUrl)))

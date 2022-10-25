@@ -13,7 +13,7 @@ const SearchGifs = () => {
   const handleSearch =  () => {
     
     console.log(search)
-    fetch(`/exerciseGifData/${search}`)
+    fetch(`api/exerciseGifData/${search}`)
     .then(res => res.json())
     .then(res => setGifs(res.result.slice(1, 4).map(item => item.gifUrl)))
     
