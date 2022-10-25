@@ -13,7 +13,7 @@ const SearchVideos = () => {
 
 
   const handleSearch = async () => {
-      const videosData = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${search}&key=${REACT_APP_YOUTUBE_API_KEY}`)
+      const videosData = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${search}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
       .then(response => response.json())
       
       console.log(videosData.items)

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import { fetchMethod } from '../apiMethods/fetchMethod'
+
 
 
 
@@ -8,10 +8,9 @@ const ShowVideos = () => {
   const [videoIds, setVideoIds] = useState([])
   const [videoItems, setVideoItems] = useState([])
 
-
   const getExerciseVideos = async () => {
     let randomNum = Math.floor(Math.random() * 7)
-      const videosData = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=exercise&key=${REACT_APP_YOUTUBE_API_KEY}`)
+      const videosData = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=exercise&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
       .then(response => response.json())
 
       console.log(videosData.items)
@@ -20,10 +19,10 @@ const ShowVideos = () => {
       setVideoItems(videosData.items)  
     } 
   
-
   useEffect(() => {
     console.log(videoIds)
     getExerciseVideos()
+    
   }, [])
 
   return (

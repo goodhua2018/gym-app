@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { CheckLogin } from '../commonMethod/CheckLogin'
 
 
 
@@ -34,9 +35,12 @@ function ShowGifs () {
       .then(res => res.exerciseGifData.slice(randomNum, randomNum + 3))
       .then(res => setGifs(res.map(item => item.gifUrl)))
   } 
-  useEffect (
-    getExerciseData
-  , [])
+  useEffect (() => {
+    getExerciseData()
+    
+  }, [])
+ 
+
 
   return (
     <div>

@@ -2,6 +2,7 @@ import React from 'react';
 import SearchVideos from './SearchVideos';
 import SearchGifs from './SearchGifs';
 import BodyParts from './BodyParts';
+import CheckLogin from '../commonMethod/CheckLogin';
 
 export default function GymAtHome() {
   return (
@@ -11,6 +12,7 @@ export default function GymAtHome() {
       
       < SearchGifs />
       < SearchVideos />
+      < CheckLogin />
     </div>
   )
 }

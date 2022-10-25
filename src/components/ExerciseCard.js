@@ -10,8 +10,8 @@ function ExerciseCard( props ) {
     {props.exercises.map((item, index) => 
       <div className="exercise-card">
     <Link to={`gymathome/${item.id}`}>
-      <Card >
-        <Card.Img variant="top" key={index} src={item.gifUrl} alt={item.name} />
+      <Card key={index}>
+        <Card.Img variant="top"  src={item.gifUrl} alt={item.name} />
         <Card.Body>
           <Button 
             variant="primary" 

@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react'
 
 function Login() {
+ 
   const [loggedInEmail, setLoggedInEmail] = useState('')
 
   const userLogin = e => {
@@ -31,7 +32,14 @@ function Login() {
   }
 
   useEffect(() => {
-    console.log(loggedInEmail)
+    fetch('/api/sessions')
+    .then(res => res.json())
+    .then(user => {
+      if (typeof user.email === 'string') {
+        console.log(user)
+        setLoggedInEmail(user.email)
+      }
+    })
   }, [loggedInEmail])
 
   const guestLogin = () => {

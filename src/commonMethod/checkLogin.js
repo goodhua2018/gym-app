@@ -1,17 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-export const checkLogin = () => {
-  const [loggedInName, setLoggedInName] = useState('')
+const CheckLogin = ({checkEmail}) => {
+
   const [loggedInEmail, setLoggedInEmail] = useState('')
 
-  fetch('/api/sessions')
+
+  useEffect(() => {
+    fetch('/api/sessions')
     .then(res => res.json())
     .then(user => {
       if (typeof user.email === 'string') {
         console.log(user)
-        setLoggedInName(user.email) 
-        setLoggedInEmail(user.name) 
-        
+        setLoggedInEmail(user.email) 
+        console.log(loggedInEmail)
+      } else {
+        console.log('no one log in')
       }
     })
+  }, [loggedInEmail])
+
+ 
+  
+  return (
+    <div onChange={() => checkEmail()}></div>
+  )
 }
+
+export default CheckLogin;
