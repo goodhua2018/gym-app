@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowVideos from './ShowVideos';
+// import ShowVideos from './ShowVideos';
 import ShowGifs from './ShowGifs';
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       Home, Join us to make your own exercise plan
       < ShowGifs />
-      < ShowVideos />
+      {/* < ShowVideos /> */}
     </div>
   )
 }

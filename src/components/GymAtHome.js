@@ -8,6 +8,7 @@ export default function GymAtHome() {
     <div>
       <h1>This is the way you Exercise At Home</h1>
       < BodyParts />
+      
       < SearchGifs />
       < SearchVideos />
     </div>

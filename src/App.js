@@ -7,6 +7,7 @@ import HeaderNav from './components/HeaderNav'
 import GymAtHome from './components/GymAtHome';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import Detail from './components/Detail';
 
 function App() {
   return (
@@ -15,8 +16,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/gymathome' element={< GymAtHome />} />
+        <Route path='/gymathome/detail' element={< Detail />} />
         <Route path='/signup' element={< SignUp />} />
         <Route path='/login' element={< Login />} />
+
 
       </Routes>
 

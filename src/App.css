@@ -12,15 +12,25 @@
   display: flex;
   gap: 10px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.show-gifs img {
-  width: 300px;
-}
+
 
 
 .fill-form {
   margin: 30px auto;
   width: 50%;
   
+}
+.exercise-card {
+  width: 300px;
+}
+
+.exercise-detail-btn {
+  color: white;
+  text-decoration: none;
+}
+.exercise-detail-btn:hover {
+  color: white;
 }
