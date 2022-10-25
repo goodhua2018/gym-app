@@ -18,12 +18,7 @@ const SearchGifs = () => {
     .then(res => setGifs(res.result.slice(1, 4).map(item => item.gifUrl)))
     
     } 
-    console.log(gifs)
-  
-
-  // useEffect(() => {
-  //   console.log(videoIds)
-  // }, [videoIds])
+    // console.log(gifs)
 
   return (
     <div>
@@ -37,7 +32,7 @@ const SearchGifs = () => {
           variant="outline-secondary"
           onClick={handleSearch}
         >
-          Exercise Videos
+          Exercises
         </Button>
       </InputGroup>
      

@@ -1,24 +1,19 @@
 
 
-import React from 'react'
+// import React from 'react'
 
-export default function Location() {
-  const findLocation = () => {
+// export default function Location() {
+//   const findLocation = () => {
+//     const success = position => console.log(position)
+//     navigator.geolocation.getCurrentPosition(success, error)
+//   }
 
-
-    const success = position => console.log(position)
-    navigator.geolocation.getCurrentPosition(success, error)
-  }
-
-
-
-
-  return (
-    <div>
-      Location
-      <button onCl></button>
+//   return (
+//     <div>
+//       Location
+//       <button onCl></button>
       
-    </div>
+//     </div>
     
-  )
-}
+//   )
+// }

@@ -5,7 +5,7 @@ import ShowGifs from './ShowGifs';
 export default function Home() {
   return (
     <div>
-      Home
+      Home, Join us to make your own exercise plan
       < ShowGifs />
       < ShowVideos />
     </div>
