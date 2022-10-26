@@ -75,6 +75,7 @@
 
 .plan-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .plan-input {

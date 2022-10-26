@@ -35,7 +35,7 @@ export default function MyPlan() {
   
   }
   const deleteUserExercise = (itemId) => {
-    fetch(`/api/bakers/${itemId}`, {
+    fetch(`/api/exerciseGifData/${itemId}`, {
       method: 'DELETE'
     })
       .then(() => {
@@ -53,21 +53,25 @@ export default function MyPlan() {
       <section className="plan-list">
         {userGifs.map((item, index) => 
           <div className="exercise-card" key={index}>
-            <img variant="top"  src={item.gifUrl} alt={item.name} width={'200px'}/>
-            <input 
-              type="text" 
-              className="plan-input"
-              placeholder="min"
-            />
-            <Button 
-              variant="success"
-              size="sm"
-              style={{marginLeft:'2px'}}
-            >
-              Start
-            </Button>
-            <span className={item.id} onClick={() => deleteUserExercise(item.id)}> <RiDeleteBin5Line size={'30'}/></span>
-          </div>
+            <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={item.gifUrl} alt={item.name} width={'200px'} />
+            <Card.Body>
+              <input 
+                type="text" 
+                className="plan-input"
+                placeholder="min"
+              />
+              <Button 
+                variant="success"
+                size="sm"
+                style={{marginLeft:'2px'}}
+              >
+                Start
+              </Button>
+              <span className={item.id} onClick={() => deleteUserExercise(item.id)}> <RiDeleteBin5Line size={'30'}/></span>
+            </Card.Body>
+          </Card>
+        </div>
         )}
       </section>
     </div>
