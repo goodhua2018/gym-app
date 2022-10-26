@@ -78,7 +78,7 @@ function ExerciseCard( props ) {
         )}
     </section>
 
-    < ShowPages />
+    {/* < ShowPages /> */}
     </div>
     
   )

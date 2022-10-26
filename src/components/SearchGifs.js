@@ -23,8 +23,9 @@ const SearchGifs = () => {
 
 
   return (
-    <div>
-      <InputGroup>
+    <div >
+      <section className="search-gifs">
+        <InputGroup>
         <Form.Control
           placeholder="Search"
           value={search}
@@ -33,12 +34,18 @@ const SearchGifs = () => {
         <Button 
           variant="outline-secondary"
           onClick={handleSearch}
+          style={{backgroundColor: 'red', color: 'white'}}
         >
           Exercises
         </Button>
-      </InputGroup>
+        </InputGroup>
+      </section>
+      <section>
+        < ExerciseCard exercises={gifs}/>
+      </section>
+      
   
-      < ExerciseCard exercises={gifs}/>
+      
     </div>
    )
 }

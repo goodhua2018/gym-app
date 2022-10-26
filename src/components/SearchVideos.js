@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import { AiFillYoutube } from 'react-icons/ai'
 
 
 
@@ -29,6 +30,9 @@ const SearchVideos = () => {
 
   return (
     <div>
+      <h2 style={{marginTop: '40px'}}>Watch Videos to Learn</h2>
+
+      <section className="search-gifs">
       <InputGroup>
         <Form.Control
           placeholder="Search"
@@ -38,11 +42,15 @@ const SearchVideos = () => {
         <Button 
           variant="outline-secondary"
           onClick={handleSearch}
+          style={{backgroundColor: 'red', color: 'white'}}
+
         >
-          Exercise Videos
+          Youtube
+          < AiFillYoutube size={30}/>
         </Button>
        
       </InputGroup>
+      </section>
      
       
       <section className="show-videos" >
