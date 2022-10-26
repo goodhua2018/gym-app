@@ -2,8 +2,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-
-import HeaderNav from './components/HeaderNav'
+import HeaderNav from './components/HeaderNav';
 import GymAtHome from './components/GymAtHome';
 import SignUp from './components/SignUp';
 import Login from './components/Login';

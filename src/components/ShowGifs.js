@@ -44,7 +44,7 @@ function ShowGifs () {
 
   return (
     <div>
-      <h2>Gym At Home</h2>
+      <h2>Exercise At Home</h2>
       
       <section className="show-gifs">
         {gifs.map((item, index) => 
