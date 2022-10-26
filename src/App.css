@@ -69,4 +69,18 @@
  
 }
 
+.my-plan {
+  text-align: center;
+}
+
+.plan-list {
+  display: flex;
+}
+
+.plan-input {
+  width: 40px;
+  border-radius: 5px;
+  margin-top:3px;
+}
+
 
