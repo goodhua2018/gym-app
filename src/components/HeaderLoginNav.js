@@ -29,7 +29,7 @@ export default function HeaderLoginNav() {
         console.log('no one log in')
       }
     })
-  }, [loggedInEmail])
+  } )
 
   if (loggedInEmail) {
     return (
