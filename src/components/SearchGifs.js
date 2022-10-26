@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import ExerciseCard from './ExerciseCard';
 
 
 
@@ -15,10 +16,11 @@ const SearchGifs = () => {
     console.log(search)
     fetch(`api/exerciseGifData/${search}`)
     .then(res => res.json())
-    .then(res => setGifs(res.result.slice(1, 4).map(item => item.gifUrl)))
-    
+    .then(res => setGifs(res.result.slice(1, 4)))
+    setSearch('')
     } 
-    // console.log(gifs)
+
+
 
   return (
     <div>
@@ -35,15 +37,8 @@ const SearchGifs = () => {
           Exercises
         </Button>
       </InputGroup>
-     
-      
-      <section className="show-gifs" >
-        {gifs.map((item, index) => 
-          <img key={index} src={item} alt="" width="300" />
-        )}
-      </section>
-
-
+  
+      < ExerciseCard exercises={gifs}/>
     </div>
    )
 }

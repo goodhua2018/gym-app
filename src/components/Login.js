@@ -1,17 +1,18 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import {useNavigate } from 'react-router-dom';
 
 function Login() {
  
   const [loggedInEmail, setLoggedInEmail] = useState('')
 
+  const navigate = useNavigate()
+
   const userLogin = e => {
     e.preventDefault()
     const form = e.target
-  
     const data = Object.fromEntries(new FormData(form))
-    // console.log(data)
     
     fetch('/api/sessions', {
       method: 'POST',
@@ -23,10 +24,11 @@ function Login() {
         console.log(res)
         if (res.error) {
           console.log(res.error)
+          navigate('/login')
         } else {
           console.log(res.email)
           setLoggedInEmail(res.email)
-          
+          navigate('/')
         }
       })
   }
@@ -42,12 +44,16 @@ function Login() {
     })
   }, [loggedInEmail])
 
-  const guestLogin = () => {
-    setLoggedInEmail('guest@guest')
-  }
+  useEffect(() => {
+
+  })
+
+  // const guestLogin = () => {
+  //   setLoggedInEmail('guest@guest')
+  // }
 
   return (
-    <div>
+    <div className="login-page">
       <h1>Login</h1>
       <Form className='fill-form' onSubmit={userLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -66,8 +72,9 @@ function Login() {
         <Button variant="primary" type="submit">
           Login
         </Button>
+        {/* <Button variant="primary" type="submit" onClick={guestLogin}>Login as Guest</Button> */}
       </Form>
-      <Button variant="primary" type="submit" onClick={guestLogin}>Login as Guest</Button>
+      
     </div>
     
   );

@@ -5,8 +5,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 // import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import ShowPages from './ShowPages';
+
 import ExerciseCard from './ExerciseCard';
 
 function BodyParts () {
@@ -28,18 +27,12 @@ function BodyParts () {
     showGifsByBodyPart()
   }, [bodyPart])
 
-  // const exerciseDetail = (e) => {
-  //   console.log(e.target.value)
-    
-  // }
 
   useEffect(() => {
     console.log(thisExercise)
   }, [thisExercise])
 
-  const addToMyPlan = () => {
-    console.log('add')
-  }
+ 
 
   return (
     <div>
@@ -55,7 +48,7 @@ function BodyParts () {
       )}
       < ExerciseCard exercises={gifs}/>
 
-      < ShowPages />
+     
     </div>
   )
 }

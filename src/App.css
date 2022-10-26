@@ -38,18 +38,27 @@
 .home-page {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;justify-content: center;
+  gap: 50px;
 }
 
 .home-head2 {
   color: red;
   margin: 20px;
-  font-size: 40px;
-  justify-content: center;
- 
+  font-size: 45px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
   
+
 }
 .footer {
   height: 200px;
   border: 1px solid red;
+}
+
+.exercise-page {
+  text-align: center;
+}
+
+.login-page h1{
+  text-align: center;;
 }

@@ -8,11 +8,12 @@ import Footer from './Footer';
 
 export default function Home() {
 
+
   
   return (
-    <div class="home-page">
+    <div className="home-page">
       <main>
-        <h2 className="home-head2">Join us to make your own exercise plan</h2> 
+        <h2 className="home-head2">Make your own exercise plan</h2> 
       </main>
       < ShowGifs />
       {/* < ShowVideos /> */}

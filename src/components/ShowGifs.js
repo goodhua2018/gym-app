@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { CheckLogin } from '../commonMethod/CheckLogin'
+import { Link } from 'react-router-dom'
 
 
 
@@ -44,7 +45,7 @@ function ShowGifs () {
 
   return (
     <div>
-      <h2>Exercise At Home</h2>
+      <h2><Link to='/gymathome'>Exercise At Home</Link></h2>
       
       <section className="show-gifs">
         {gifs.map((item, index) => 

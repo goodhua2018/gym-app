@@ -5,8 +5,17 @@ import { Link } from 'react-router-dom';
 import CheckLogin from '../commonMethod/CheckLogin';
 
 export default function HeaderLoginNav() {
-  const [loggedInEmail, setLoggedInEmail] = useState('')
+  const [loggedInEmail, setLoggedInEmail] = useState(null)
   console.log(loggedInEmail)
+
+  function logout() {
+    fetch('/api/sessions', {
+      method: 'DELETE'
+    })
+    .then(() => {
+      setLoggedInEmail(null)
+    })
+  }
 
   useEffect(() => {
     fetch('/api/sessions')
@@ -21,9 +30,22 @@ export default function HeaderLoginNav() {
       }
     })
   }, [loggedInEmail])
+
   if (loggedInEmail) {
     return (
-      <button>Log out</button>
+      <div>
+        <Nav
+          className="ms-auto my-2 my-lg-0"
+          style={{ maxHeight: '120px' }}
+          navbarScroll
+        >
+        <Nav.Link  
+          onClick={logout}
+        >Log out</Nav.Link>
+        <Nav.Link as={Link} to="/myplan">My Plan</Nav.Link>
+      </Nav>
+      </div>
+      
     )
   } else {
     return (

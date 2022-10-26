@@ -6,7 +6,7 @@ import CheckLogin from '../commonMethod/CheckLogin';
 
 export default function GymAtHome() {
   return (
-    <div>
+    <div className="exercise-page">
       <h1>This is the way you Exercise At Home</h1>
       < BodyParts />
       

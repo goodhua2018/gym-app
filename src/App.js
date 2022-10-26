@@ -7,6 +7,7 @@ import GymAtHome from './components/GymAtHome';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Detail from './components/Detail';
+import MyPlan from './components/MyPlan';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/gymathome/detail' element={< Detail />} />
         <Route path='/signup' element={< SignUp />} />
         <Route path='/login' element={< Login />} />
+        <Route path='/myplan' element={< MyPlan />} />
 
 
       </Routes>
