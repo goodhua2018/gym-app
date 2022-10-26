@@ -4,6 +4,7 @@ import ShowGifs from './ShowGifs';
 import CheckLogin from '../commonMethod/CheckLogin';
 import Footer from './Footer';
 // import { useState, useEffect } from 'react';
+import Location from './Location';
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       {/* < ShowVideos /> */}
       < Footer />
       < CheckLogin />
+      < Location />
     </div>
   )
 }
