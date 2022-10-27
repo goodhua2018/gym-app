@@ -18,7 +18,7 @@ export default function Home() {
         <h2 className="home-head2">Make your own exercise plan</h2> 
       </main>
       < ShowGifs />
-      {/* < ShowVideos /> */}
+    
       < ShowMap />
       < ShowVideos />
       < Footer />

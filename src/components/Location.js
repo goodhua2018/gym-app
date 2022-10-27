@@ -7,13 +7,12 @@ import Nav from 'react-bootstrap/Nav';
 
 export default function Location() {
 
-  const [lat, setLat] = useState(-33.8)
-  const [lon, setLon] = useState(151.2)
-  const [locationCity, setLocationCity] = useState('Sydney')
-  const [locationCountry, setLocationCountry] = useState('AU')
+  const [lat, setLat] = useState('')
+  const [lon, setLon] = useState('')
+  const [locationCity, setLocationCity] = useState('')
+  const [locationCountry, setLocationCountry] = useState('')
   const [temperature, setTemperature] = useState('')
   const [weather, setWeather] = useState('')
-
 
 
   const findLocation = () => {
@@ -29,30 +28,34 @@ export default function Location() {
           setLocationCountry(info.countryCode)
           
         })
-      
-      
     }
     const error = () => {
       console.log('unable to get location')
-      // setLat(-33.8)
-      // setLon(151.2)
-      // setLocationCity('Sydney')
-      // setLocationCountry('Au')
+      setLat(-33.8)
+      setLon(151.2)
+      setLocationCity('Sydney')
+      setLocationCountry('Au')
     }
 
     navigator.geolocation.getCurrentPosition(success, error)
   }
+
+  
 
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`)
     .then(res => res.json())
     .then(data => {
       console.log(data)
-      setTemperature((data.main.temp - 273.15).toFixed(1))
+      setTemperature((data.main.temp - 273.15).toFixed(1) + '℃')
       setWeather(data.weather[0].main)
 
     })
   }, [lat])
+
+  useEffect(() => {
+    findLocation()
+  }, [])
  
 
   return (
@@ -65,7 +68,7 @@ export default function Location() {
         style={{ maxHeight: '120px' }}
         navbarScroll
         >
-          <Nav.Link style={{color:'#0D6EFD'}}>{temperature}℃    {weather}</Nav.Link>
+          <Nav.Link style={{color:'#0D6EFD'}}>{temperature}    {weather}</Nav.Link>
 
           <Nav.Link style={{color:'#0D6EFD'}}> {locationCity}  {locationCountry}</Nav.Link>
           <Nav.Link onClick={findLocation}><GoLocation /></Nav.Link>

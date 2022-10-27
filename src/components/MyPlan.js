@@ -95,9 +95,9 @@ export default function MyPlan() {
                 onChange={(e) => setMins(e.target.value)}
               />
               <Button 
-                variant="success"
+               
                 size="sm"
-                style={{marginLeft:'2px'}}
+                style={{marginLeft:'2px', backgroundColor:'#E67C79'}}
                 onClick={() => timer()}
               >
                 Start
