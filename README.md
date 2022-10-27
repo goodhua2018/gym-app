@@ -30,9 +30,9 @@
 - HTML/CSS/JS
 - Bootstrap
 - SQL, PostgreSQL
-- Youtube API, Exercise API
 - express-session, pg, bcrypt, dotenv
 - Heroku
+- Youtube API, Exercise API, Location API, Google Map API, OpenWeather API
 
 ## :smile: What I feel
 - The passion in react drives me finish this project in 3 days
