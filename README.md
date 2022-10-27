@@ -38,7 +38,11 @@
 - The passion in react drives me finish this project in 3 days
 - The first day, I tried different APIs to do various tests to prepare the project
 - The second day, I self learned how to use hooks and dug deep and apllied them into the project
+- The last day, after finishing the main features in project, I created my own Hook to reuse.
+
+
+
+## :white_check_mark: Future
 - This is my final project for my GA Software Engineer Course
-
-## :white_check_mark: Future features
-
+- This is not the end, instead, it is a new start. 
+- I not only learnt the technicals, MORE IMPORTANTLY, I acquired the skills to learn what I need in a short time. 
