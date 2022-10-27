@@ -87,7 +87,14 @@
 }
 .body-part-container {
   display: flex;
-  
+
 }
+
+.map-page {
+  width: 500px;
+  margin: 40px auto;
+  text-align: center;
+}
+
 
 

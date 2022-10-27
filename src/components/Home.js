@@ -5,7 +5,8 @@ import CheckLogin from '../commonMethod/CheckLogin';
 import Footer from './Footer';
 // import { useState, useEffect } from 'react';
 import Location from './Location';
-import HeaderNav from './HeaderNav'
+import HeaderNav from './HeaderNav';
+import Map from './Map'
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       < Footer />
       < CheckLogin />
       < Location />
+      < Map />
     </div>
   )
 }
