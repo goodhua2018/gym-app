@@ -54,12 +54,10 @@ export default function HeaderLoginNav() {
         className="ms-auto my-2 my-lg-0"
         style={{ maxHeight: '120px' }}
         navbarScroll
-      >
-        <Nav.Link as={Link} to="/signup" >Sign up</Nav.Link>
-        <Nav.Link as={Link} to="/login">Login</Nav.Link>
-      </Nav>
-      
-
+        >
+          <Nav.Link as={Link} to="/signup" >Sign up</Nav.Link>
+          <Nav.Link as={Link} to="/login">Login</Nav.Link>
+        </Nav>
       </div>
             
            

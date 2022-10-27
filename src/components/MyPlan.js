@@ -6,6 +6,9 @@ import {RiDeleteBin5Line} from 'react-icons/ri';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { CgSandClock } from 'react-icons/cg';
+import HeaderNav from './HeaderNav';
+import SearchVideos from './SearchVideos';
+import Footer from './Footer';
 
 
 export default function MyPlan() {
@@ -71,7 +74,8 @@ export default function MyPlan() {
   }
 
   return (
-    <div className="my-plan">
+    <div className="my-plan-page">
+      < HeaderNav />
       <h1>My Exercise Plan</h1>
       <section>
         <button onClick={() => getPlan()}>click</button>
@@ -109,6 +113,8 @@ export default function MyPlan() {
         </div>
         )}
       </section>
+      < SearchVideos />
+      < Footer />
     
     </div>
   )

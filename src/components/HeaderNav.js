@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import CheckLogin from '../commonMethod/CheckLogin';
 import HeaderLoginNav from './HeaderLoginNav';
+import Location from './Location';
 
 function HeaderNav() {
   return (
@@ -26,6 +27,7 @@ function HeaderNav() {
             <Nav.Link as={Link} to="/gymathome">Exercise At Home</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        < Location />
         < HeaderLoginNav />
       </Container>
     </Navbar>

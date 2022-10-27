@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import ShowPages from './ShowPages';
+import ShowPages from './Pagination';
 import {useState, useEffect} from 'react'
+import PaginatedItems from './Pagination';
 
 
 function ExerciseCard( props ) {
   const [loggedInEmail, setLoggedInEmail] = useState('')
+
   useEffect(() => {
     fetch('/api/sessions')
     .then(res => res.json())
@@ -44,12 +46,15 @@ function ExerciseCard( props ) {
           }     
       })
   }
-
+  const [gifs, setGifs] = useState([])
+  useEffect(() => {
+    setGifs(props.exercises)
+  })
   return (
     <div>
 
       <section className="show-gifs" >
-    {props.exercises.map((item, index) => 
+    {gifs.map((item, index) => 
       <div className="exercise-card" key={index}>
    
       <Card >
@@ -77,8 +82,6 @@ function ExerciseCard( props ) {
       </div>
         )}
     </section>
-
-    {/* < ShowPages /> */}
     </div>
     
   )

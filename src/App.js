@@ -12,7 +12,7 @@ import MyPlan from './components/MyPlan';
 function App() {
   return (
     <div className="App">
-      < HeaderNav />
+      {/* < HeaderNav /> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/gymathome' element={< GymAtHome />} />

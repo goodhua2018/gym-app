@@ -1,6 +1,6 @@
-/* .App {
-  text-align: center;
-} */
+.App {
+  background-color: #F8F9FA;
+}
 
 .show-videos {
   display: flex;
@@ -52,6 +52,7 @@
 }
 .footer {
   height: 150px;
+
   
 }
 
@@ -69,7 +70,7 @@
  
 }
 
-.my-plan {
+.my-plan-page {
   text-align: center;
   
 }
@@ -83,6 +84,10 @@
   width: 40px;
   border-radius: 5px;
   margin-top:3px;
+}
+.body-part-container {
+  display: flex;
+  
 }
 
 

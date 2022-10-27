@@ -37,15 +37,20 @@ function BodyParts () {
   return (
     <div>
       <h3>Choose Which part you would like to strengh</h3>
-      {bodyNames.map((bodyPart, index) => 
-        <button
-          key={index}
-          // value={bodyPart}
-          onClick={() => setBodyPart(bodyPart)}
-        >
-          <img src={bodyImages[bodyPart]} alt={bodyPart} width={'80px'} style={{margin: '10px'}}/>
-        </button>
-      )}
+      <section className="body-part-container">
+        {bodyNames.map((bodyPart, index) => 
+          <Button variant="light"
+            key={index}
+            // value={bodyPart}
+            onClick={() => setBodyPart(bodyPart)}
+            className="body-part-btn"
+          >
+            <img src={bodyImages[bodyPart]} alt={bodyPart} width={'80px'} style={{margin: '10px'}}/>
+          </Button>
+        
+        )}
+      </section>
+      
       < ExerciseCard exercises={gifs}/>
 
      
