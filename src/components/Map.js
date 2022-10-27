@@ -22,7 +22,7 @@ function ShowMap () {
       <div className="map-page">
       
       <h2 style={{margin:'40px'}}><Link to='/gym'>Go To A GYM</Link></h2>
-      <LoadScript googleMapsApiKey='AIzaSyAxqr6ydoVRiSFg-7-TdT1vD2IyY5ZNU48'>
+      <LoadScript googleMapsApiKey={process.env.GOOGLE_MAP_KEY}>
 
         <GoogleMap 
           zoom={10} 

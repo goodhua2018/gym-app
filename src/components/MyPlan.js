@@ -113,7 +113,7 @@ export default function MyPlan() {
         </div>
         )}
       </section>
-      < SearchVideos />
+      
       < Footer />
     
     </div>
