@@ -1,5 +1,6 @@
-import { useMemo } from 'react';
+import { Link } from 'react-router-dom'
 import { GoogleMap, Marker, LoadScript } from '@react-google-maps/api';
+import HeaderNav from './HeaderNav';
 
 export default function Map() {
 
@@ -16,8 +17,11 @@ function ShowMap () {
 
   const center = {lat: -34, lng: 138}
   return (
-    <div className="map-page">
-      <h1>Go To A GYM</h1>
+    <div>
+      < HeaderNav />
+      <div className="map-page">
+      
+      <h2 style={{margin:'40px'}}><Link to='/gym'>Go To A GYM</Link></h2>
       <LoadScript googleMapsApiKey='AIzaSyAxqr6ydoVRiSFg-7-TdT1vD2IyY5ZNU48'>
 
         <GoogleMap 
@@ -30,6 +34,8 @@ function ShowMap () {
       </LoadScript>
       
     </div>
+    </div>
+    
     
   )
 }

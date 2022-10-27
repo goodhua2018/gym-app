@@ -30,7 +30,7 @@ const SearchVideos = () => {
 
   return (
     <div>
-      <h2 style={{marginTop: '40px'}}>Watch Videos to Learn</h2>
+      {/* <h2 style={{marginTop: '40px'}}>Watch Videos to Learn</h2> */}
 
       <section className="search-gifs">
       <InputGroup>

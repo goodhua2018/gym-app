@@ -96,5 +96,29 @@
   text-align: center;
 }
 
+.body-part-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+
+}
+
+.video-page {
+  text-align: center;
+
+}
+
+.video-page h2 {
+  padding: 30px;
+}
+
+.show-videos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 
 

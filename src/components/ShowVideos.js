@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 
 
@@ -14,7 +15,7 @@ const ShowVideos = () => {
       .then(response => response.json())
 
       console.log(videosData.items)
-      setVideoIds(videosData.items.slice(randomNum, randomNum + 3).map(item => `https://www.youtube.com/embed/${item.id.videoId} `))
+      setVideoIds(videosData.items.slice(randomNum, randomNum + 4).map(item => `https://www.youtube.com/embed/${item.id.videoId} `))
 
       setVideoItems(videosData.items)  
     } 
@@ -26,14 +27,15 @@ const ShowVideos = () => {
   }, [])
 
   return (
-    <div>
+    <div className="video-page">
       
-      <h2>Watch videos</h2>
+      <h2><Link to='/video'>Watch Videos To Learn</Link></h2>
       
       <section className="show-videos" >
         {videoIds.map((item, index) => <iframe width="300" height="200" src={item} frameBorder="0" key={index} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>)}
-        
       </section>
+
+
 
 
     </div>

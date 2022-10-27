@@ -61,15 +61,14 @@ function ExerciseCard( props ) {
         <Card.Img variant="top"  src={item.gifUrl} alt={item.name} />
         <Card.Body>
         <Link to={`gymathome/${item.id}`}><Button 
-            variant="primary" 
+            style={{backgroundColor:'#E67C79'}}
             value={item}
           >
-            Details
+            {item.bodyPart}
           </Button></Link>
 
           <Button 
-            variant="primary" 
-            style={{marginLeft: '10px'}}
+            style={{marginLeft: '10px', backgroundColor:'#E67C79'}}
             onClick={() => addToMyPlan(item.id)}
           >
             Add to My Plan

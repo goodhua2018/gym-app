@@ -19,10 +19,9 @@ export default function Home() {
       </main>
       < ShowGifs />
       {/* < ShowVideos /> */}
-      < Footer />
-      < CheckLogin />
-      < Location />
       < Map />
+      < ShowVideos />
+      < Footer />
     </div>
   )
 }

@@ -25,6 +25,7 @@ function HeaderNav() {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/gym">Gym Nearby</Nav.Link>
             <Nav.Link as={Link} to="/gymathome">Exercise At Home</Nav.Link>
+            <Nav.Link as={Link} to="/video">Watch Video to Learn</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         < Location />
