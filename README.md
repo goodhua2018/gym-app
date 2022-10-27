@@ -34,7 +34,7 @@
 - express-session, pg, bcrypt, dotenv
 - Heroku
 
-## :sob: What I feel
+## :smile: What I feel
 - The passion in react drives me finish this project in 3 days
 - The first day, I tried different APIs to do various tests to prepare the project
 - The second day, I self learned how to use hooks and dug deep and apllied them into the project
