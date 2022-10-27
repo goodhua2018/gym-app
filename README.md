@@ -19,7 +19,7 @@
 
 
 
-![Wireframing](./frame.jpg) (./images/page2.png)
+![Wireframing](https://ibb.co/VmQxXxv)
 
 ## :rocket: Cool tech
 - React, React-Route
