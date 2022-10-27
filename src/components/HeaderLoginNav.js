@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
-import CheckLogin from '../commonMethod/CheckLogin';
+import { Link, Navigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 export default function HeaderLoginNav() {
   const [loggedInEmail, setLoggedInEmail] = useState(null)
   console.log(loggedInEmail)
+  const navigate = useNavigate()
 
   function logout() {
     fetch('/api/sessions', {
@@ -14,6 +15,7 @@ export default function HeaderLoginNav() {
     })
     .then(() => {
       setLoggedInEmail(null)
+      navigate('/')
     })
   }
 

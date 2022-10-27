@@ -92,7 +92,8 @@
 
 .map-page {
   width: 500px;
-  text-align: center;
+  margin: 0 auto;
+  
 }
 
 .body-part-container {

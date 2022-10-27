@@ -44,7 +44,7 @@ export default function Location() {
   }
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=4b96b6cfa257ab0f91af47587a26d850`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`)
     .then(res => res.json())
     .then(data => {
       console.log(data)

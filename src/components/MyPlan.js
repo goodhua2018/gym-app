@@ -68,9 +68,6 @@ export default function MyPlan() {
           clearInterval(tempTimer)
         } 
     }, 1000)
-    
-       
-     
   }
 
   return (

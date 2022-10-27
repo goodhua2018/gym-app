@@ -6,7 +6,7 @@ import Footer from './Footer';
 // import { useState, useEffect } from 'react';
 import Location from './Location';
 import HeaderNav from './HeaderNav';
-import Map from './Map'
+import ShowMap from './ShowMap';
 
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
       </main>
       < ShowGifs />
       {/* < ShowVideos /> */}
-      < Map />
+      < ShowMap />
       < ShowVideos />
       < Footer />
     </div>
