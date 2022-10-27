@@ -19,7 +19,7 @@
 
 
 
-![Wireframing](./frame.jpg)
+![Wireframing](./frame.jpg) (./images/page2.png)
 
 ## :rocket: Cool tech
 - React, React-Route

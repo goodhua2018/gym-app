@@ -15,7 +15,7 @@ export default function MyPlan() {
   const [loggedInEmail, setLoggedInEmail] = useState('')
   const [userGifs, setUserGifs] = useState([])
   const [mins, setMins] = useState('')
-  const timeRef = useRef()
+  // const timeRef = useRef()
 
   useEffect(() => {
     fetch('/api/sessions')
@@ -60,7 +60,6 @@ export default function MyPlan() {
   // }, [mins])
 
   const timer = () => {
-   
       let tempTimer = setInterval(() => {
         if (mins > 0 ) {
           setMins(mins => mins - 1)

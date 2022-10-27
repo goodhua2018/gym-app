@@ -40,7 +40,6 @@ export default function Location() {
     navigator.geolocation.getCurrentPosition(success, error)
   }
 
-  
 
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`)
