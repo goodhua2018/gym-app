@@ -1,24 +1,53 @@
 import React, { useState, useEffect }  from 'react'
+import { CgSandClock } from 'react-icons/cg';
+import Button from 'react-bootstrap/Button';
 
 
-export default function Timer(mins) {
-  const [hours, setHours] = useState('');
-  const [minutes, setMinutes] = useState('');
-  const [seconds, setSeconds] = useState('');
+const Timer = (props) => {
+  const [time, setTime] = useState(Number(props.sec))
+  const [running, setRunning] = useState(false)
+  const [btnText, setBtnText] = useState('Start')
 
-  setHours(Math.floor(mins / 60));
-  setMinutes(Math.floor(mins - 60 * hours)) 
-  setSeconds(0)
 
-  const timer = () => {
-    let timeChange = setInterval(() => setTimeout(t => t -1), 1000)
+  useEffect(() => {
+    let tempTimer;
+    if (running && time > 0) {
+      tempTimer = setTimeout(() => {
+        setTime(time => time -1)
+      }, 1000)
+      setBtnText('Stop')
+      
+    } else {
+      clearTimeout(tempTimer)
+      setBtnText('Start')
+      setRunning(false)
+    }
+    return () => clearTimeout(tempTimer)
+  })
+
+  function toggle () {
+    if (running) { 
+      return false
+    } else {
+      if (time == '') {
+        setTime(Number(props.sec))
+      } 
+      return true
+    }
   }
-  
+
   return (
-    <div>Timer
-      <section>
-        {hours}:{minutes}:{seconds}
-      </section>
-    </div>
+    <span>
+      <Button       
+        size="sm"
+        style={{marginLeft:'2px', backgroundColor:'#E67C79'}}
+        onClick={() => setRunning(toggle)}
+      >
+        {btnText}
+      </Button>
+      <span > < CgSandClock /></span>
+      <p style={{height: '30px', fontSize: '20px', paddingTop: '5px'}}> {time}</p>
+    </span>
   )
 }
+export default Timer;

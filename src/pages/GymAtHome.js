@@ -1,9 +1,9 @@
 import React from 'react';
-import SearchVideos from './SearchVideos';
-import SearchGifs from './SearchGifs';
-import BodyParts from './BodyParts';
-import Footer from './Footer';
-import HeaderNav from './HeaderNav';
+import SearchVideos from '../components/SearchVideos';
+import SearchGifs from '../components/SearchGifs';
+import BodyParts from '../components/BodyParts';
+import Footer from '../components/Footer';
+import HeaderNav from '../components/HeaderNav';
 
 export default function GymAtHome() {
   return (

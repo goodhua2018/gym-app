@@ -1,12 +1,10 @@
 import React from 'react';
-import ShowVideos from './ShowVideos';
-import ShowGifs from './ShowGifs';
-import CheckLogin from '../commonMethod/CheckLogin';
-import Footer from './Footer';
-// import { useState, useEffect } from 'react';
-import Location from './Location';
-import HeaderNav from './HeaderNav';
-import ShowMap from './ShowMap';
+import ShowVideos from '../components/ShowVideos';
+import ShowGifs from '../components/ShowGifs';
+import Footer from '../components/Footer';
+import HeaderNav from '../components/HeaderNav';
+import ShowMap from '../components/ShowMap';
+import Timer from '../components/Timer';
 
 
 export default function Home() {
@@ -22,6 +20,7 @@ export default function Home() {
       < ShowMap />
       < ShowVideos />
       < Footer />
+      < Timer />
     </div>
   )
 }

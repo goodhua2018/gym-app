@@ -1,6 +1,6 @@
 
-import HeaderNav from './HeaderNav';
-import ShowMap from './ShowMap';
+import HeaderNav from '../components/HeaderNav';
+import ShowMap from '../components/ShowMap';
 
 export default function Map() {
 

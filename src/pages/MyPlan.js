@@ -6,9 +6,10 @@ import {RiDeleteBin5Line} from 'react-icons/ri';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { CgSandClock } from 'react-icons/cg';
-import HeaderNav from './HeaderNav';
-import SearchVideos from './SearchVideos';
-import Footer from './Footer';
+import HeaderNav from '../components/HeaderNav';
+import SearchVideos from '../components/SearchVideos';
+import Footer from '../components/Footer';
+import Timer from '../components/Timer';
 
 
 export default function MyPlan() {
@@ -77,8 +78,7 @@ export default function MyPlan() {
         <button onClick={() => getPlan()}>click</button>
       </section>
       <section style={{marginTop: '20px'}}>
-        < CgSandClock />
-        <h2>{mins}</h2>
+        
       </section>
       <section className="plan-list">
         {userGifs.map((item, index) => 
@@ -86,6 +86,7 @@ export default function MyPlan() {
             <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={item.gifUrl} alt={item.name} width={'200px'} />
             <Card.Body>
+            <span className={item.id} onClick={() => deleteUserExercise(item.id)}> <RiDeleteBin5Line size={'30'}/></span>
               <input 
                 type="text" 
                 className="plan-input"
@@ -93,15 +94,16 @@ export default function MyPlan() {
                 // value={mins}
                 onChange={(e) => setMins(e.target.value)}
               />
-              <Button 
+              {/* <Button 
                
                 size="sm"
                 style={{marginLeft:'2px', backgroundColor:'#E67C79'}}
                 onClick={() => timer()}
               >
                 Start
-              </Button>
-              <span className={item.id} onClick={() => deleteUserExercise(item.id)}> <RiDeleteBin5Line size={'30'}/></span>
+              </Button> */}
+              < Timer sec={mins}/>
+             
             </Card.Body>
           
           </Card>
