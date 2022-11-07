@@ -6,7 +6,6 @@ export default function Map() {
 
   return (
     <div>
-
       < HeaderNav />
       <ShowMap />
     </div>

@@ -8,7 +8,6 @@ import Timer from '../components/Timer';
 
 
 export default function Home() {
-
   return (
     <div className="home-page">
       < HeaderNav />
@@ -16,7 +15,6 @@ export default function Home() {
         <h2 className="home-head2">Make your own exercise plan</h2> 
       </main>
       < ShowGifs />
-    
       < ShowMap />
       < ShowVideos />
       < Footer />

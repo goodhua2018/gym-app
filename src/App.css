@@ -15,9 +15,6 @@
   flex-wrap: wrap;
 }
 
-
-
-
 .fill-form {
   margin: 30px auto;
   width: 50%;
@@ -48,13 +45,10 @@
   margin: 20px;
   font-size: 45px;
   font-family:Verdana, Geneva, Tahoma, sans-serif
-  
-
 }
-.footer {
-  height: 150px;
 
-  
+.footer {
+  height: 150px; 
 }
 
 .exercise-page {
@@ -89,27 +83,22 @@
 }
 .body-part-container {
   display: flex;
-
 }
 
 .map-page {
   width: 500px;
   margin: 0 auto;
-  
 }
 
 .body-part-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
-
-
 }
+
 
 .video-page {
   text-align: center;
-
 }
 
 .video-page h2 {

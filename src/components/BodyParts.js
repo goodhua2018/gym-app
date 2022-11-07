@@ -2,15 +2,9 @@ import { useEffect } from 'react'
 import { Button } from 'react-bootstrap'
 import { bodyNames, bodyImages } from '../bodyImages'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-
-// import Button from 'react-bootstrap/Button';
-
 import ExerciseCard from './ExerciseCard';
 
 function BodyParts () {
-  console.log(bodyImages)
-  console.log(bodyNames)
   const [bodyPart, setBodyPart] = useState('')
   const [gifs, setGifs] = useState([])
   const [thisExercise, setThisExercise] = useState({})
@@ -19,8 +13,7 @@ function BodyParts () {
     fetch(`api/exerciseGifData/${bodyPart}/bodyPart`)
       .then(res => res.json())
       .then(res => setGifs(res.result.slice(5, 15)))
-    } 
-    console.log(gifs)
+  } 
   
   useEffect(() => {
     console.log(bodyPart)
@@ -41,24 +34,21 @@ function BodyParts () {
         {bodyNames.map((bodyPart, index) => 
           <Button variant="light"
             key={index}
-            // value={bodyPart}
             onClick={() => setBodyPart(bodyPart)}
             className="body-part-btn"
           >
-            <img src={bodyImages[bodyPart]} alt={bodyPart} width={'80px'} style={{margin: '10px'}}/>
+            <img 
+              src={bodyImages[bodyPart]} 
+              alt={bodyPart} 
+              style={{margin: '10px', width: '80px'}}
+            />
           </Button>
-        
         )}
       </section>
-      
       < ExerciseCard exercises={gifs}/>
-
-     
     </div>
   )
 }
-
-
 export default BodyParts
 
 

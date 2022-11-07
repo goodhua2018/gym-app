@@ -77,43 +77,30 @@ export default function MyPlan() {
       <section>
         <button onClick={() => getPlan()}>click</button>
       </section>
+
       <section style={{marginTop: '20px'}}>
-        
       </section>
+
       <section className="plan-list">
         {userGifs.map((item, index) => 
           <div className="exercise-card" key={index}>
             <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={item.gifUrl} alt={item.name} width={'200px'} />
-            <Card.Body>
-            <span className={item.id} onClick={() => deleteUserExercise(item.id)}> <RiDeleteBin5Line size={'30'}/></span>
-              <input 
-                type="text" 
-                className="plan-input"
-                placeholder="sec"
-                // value={mins}
-                onChange={(e) => setMins(e.target.value)}
-              />
-              {/* <Button 
-               
-                size="sm"
-                style={{marginLeft:'2px', backgroundColor:'#E67C79'}}
-                onClick={() => timer()}
-              >
-                Start
-              </Button> */}
-              < Timer sec={mins}/>
-             
-            </Card.Body>
-          
-          </Card>
-  
-        </div>
+              <Card.Img variant="top" src={item.gifUrl} alt={item.name} width={'200px'} />
+              <Card.Body>
+                <span className={item.id} onClick={() => deleteUserExercise(item.id)}> <RiDeleteBin5Line size={'30'}/></span>
+                <input 
+                  type="text" 
+                  className="plan-input"
+                  placeholder="sec"
+                  onChange={(e) => setMins(e.target.value)}
+                />
+                < Timer sec={mins}/>
+              </Card.Body>
+            </Card>
+          </div>
         )}
       </section>
-      
       < Footer />
-    
     </div>
   )
 }
