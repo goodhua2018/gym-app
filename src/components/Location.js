@@ -12,7 +12,6 @@ export default function Location() {
 
   const findLocation = () => {
     const success = position => {
-      // console.log(position.coords)
       setLat(position.coords.latitude)
       setLon(position.coords.longitude)
       fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`)

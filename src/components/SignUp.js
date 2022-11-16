@@ -10,14 +10,12 @@ function SignUp() {
   const [password, setPassword] = useState('')
   const [msg, setMsg] = useState('')
   const [color, setColor] = useState('')
-
   const navigate = useNavigate()
   
   const createUser = e => {
     e.preventDefault()
     const form = e.target 
     const data = Object.fromEntries(new FormData(form))
-    console.log(data)
 
     fetch('/api/users', {
       method: 'POST', 
@@ -26,16 +24,17 @@ function SignUp() {
     })
       .then(res => res.json())
       .then(res => {
-          if (res.error) {
-              console.log(res.error)
-              navigate('/signup')
-          } else {
-            // back to the main page 
-              console.log(res)
-              navigate('/login')
-          }     
+        if (res.error) {
+            console.log(res.error)
+            navigate('/signup')
+        } else {
+          // back to the main page 
+            console.log(res)
+            navigate('/login')
+        }     
       })
   }
+
   const passwordStrong = () => {
     if (password.length === 0) {
       setNow(0)
@@ -63,12 +62,11 @@ function SignUp() {
     <div>
       <h1 className='text-center'>Sign Up</h1>
       <Form className='fill-form' onSubmit={e => createUser(e)}>
-
         <Form.Group className="mb-3" controlId="formUserName">
           <span>*</span><Form.Label>User Name</Form.Label>
           <Form.Control type="name" name="userName" placeholder="User Name" required/>
-          
         </Form.Group>
+
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <span >*</span><Form.Label>Email address</Form.Label>
           <Form.Control type="email" name="email" placeholder="Enter email" required/>
@@ -88,16 +86,14 @@ function SignUp() {
         </Form.Group>
 
         <section style={{width: '50%'}}>
-          <ProgressBar variant={color} now={now} label={msg}  />
+          <ProgressBar variant={color} now={now} label={msg} />
         </section>
 
         <Button variant="primary" type="submit" style={{marginTop: '30px'}} >
           Sign up
-         </Button>
-        </Form>
-
+        </Button>
+      </Form>
     </div>
-    
   );
 }
 

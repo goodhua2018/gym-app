@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { CheckLogin } from '../commonMethod/CheckLogin'
 import { Link } from 'react-router-dom'
-
-
 
 
 function ShowGifs () {
@@ -36,17 +33,14 @@ function ShowGifs () {
       .then(res => res.exerciseGifData.slice(randomNum, randomNum + 3))
       .then(res => setGifs(res.map(item => item.gifUrl)))
   } 
+
   useEffect (() => {
     getExerciseData()
-    
   }, [])
  
-
-
   return (
     <div>
       <h2><Link to='/gymathome'>Exercise At Home</Link></h2>
-      
       <section className="show-gifs">
         {gifs.map((item, index) => 
           <img key={index} src={item} alt="" />

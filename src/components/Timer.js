@@ -16,7 +16,6 @@ const Timer = (props) => {
         setTime(time => time -1)
       }, 1000)
       setBtnText('Stop')
-      
     } else {
       clearTimeout(tempTimer)
       setBtnText('Start')

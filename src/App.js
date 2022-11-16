@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import GymAtHome from './pages/GymAtHome';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import Detail from './components/Detail';
 import MyPlan from './pages/MyPlan';
 import Map from './pages/Map';
 import Videos from './pages/Videos';
@@ -16,7 +15,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/gymathome' element={< GymAtHome />} />
-        <Route path='/gymathome/detail' element={< Detail />} />
         <Route path='/signup' element={< SignUp />} />
         <Route path='/login' element={< Login />} />
         <Route path='/myplan' element={< MyPlan />} />

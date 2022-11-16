@@ -12,25 +12,23 @@ const ShowMap = () => {
   
   return (
     <div>
-     
       <div className="map-page">
-      
-      <h2 style={{margin:'40px'}}><Link to='/gym'>Go To A GYM</Link></h2>
-      <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAP_KEY}>
-
-        <GoogleMap 
-          zoom={10} 
-          center={center} 
-          mapContainerStyle={containerStyle}
-        >
-          <Marker position={center} />
-        </GoogleMap>
-      </LoadScript>
-      
+        <h2 style={{margin:'40px'}}>
+          <Link to='/gym'>
+            Go To A GYM
+          </Link>
+        </h2>
+        <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAP_KEY}>
+          <GoogleMap 
+            zoom={10} 
+            center={center} 
+            mapContainerStyle={containerStyle}
+          >
+            <Marker position={center} />
+          </GoogleMap>
+        </LoadScript>
+      </div>
     </div>
-    </div>
-    
-    
   )
 }
 

@@ -6,9 +6,7 @@ import {useNavigate } from 'react-router-dom';
 function Login() {
  
   const [loggedInEmail, setLoggedInEmail] = useState('')
-
   const navigate = useNavigate()
-
   const userLogin = e => {
     e.preventDefault()
     const form = e.target
@@ -44,19 +42,11 @@ function Login() {
     })
   }, [loggedInEmail])
 
-  useEffect(() => {
-
-  })
-
-  // const guestLogin = () => {
-  //   setLoggedInEmail('guest@guest')
-  // }
-
   return (
     <div className="login-page">
       <h1>Login</h1>
       <Form className='fill-form' onSubmit={userLogin}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicEmail">
           <span>*</span><Form.Label>Email address</Form.Label>
           <Form.Control type="email" name="email" placeholder="Enter email" required/>
           <Form.Text className="text-muted">
@@ -72,11 +62,8 @@ function Login() {
         <Button variant="primary" type="submit">
           Login
         </Button>
-        {/* <Button variant="primary" type="submit" onClick={guestLogin}>Login as Guest</Button> */}
       </Form>
-      
     </div>
-    
   );
 }
 
