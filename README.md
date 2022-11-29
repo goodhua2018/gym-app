@@ -1,7 +1,7 @@
 # Gym App with React & Express
 
 ## :computer: See my project [Click here]
-(https://gymmyway.herokuapp.com/)
+(https://gymmyway.onrender.com/)
 
 
 
